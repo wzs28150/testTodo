@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --mode production",
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "cross-env": "^5.1.4",
+    "webpack-cli": "^2.0.14",
     "webpack-dev-server": "^3.1.3"
   }
 }
