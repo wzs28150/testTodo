@@ -12,6 +12,8 @@
         v-for="todo in filteredTodos"
         :key="todo.id"
         @del="deleteTodo"
+        @update="updateTodo"
+        @change="changeTodo"
         />
       <tabs :filter="filter"
       :todos="todos"
@@ -50,7 +52,8 @@ export default {
         this.todos.unshift({
           id: id++,
           content: e.target.value.trim(),
-          completed:false
+          completed:false,
+          updated:false
         })
         e.target.value = ''
     },
@@ -62,6 +65,13 @@ export default {
     },
     clearAllCompleted(){
       this.todos = this.todos.filter(todo => !todo.completed)
+    },updateTodo(todo){
+      todo.updated = todo.updated === true ? false : true
+      // this.todo.updated = true
+      // this.todo.content = this
+    },changeTodo(todo){
+
+      todo.updated = false
     }
   }
 }
