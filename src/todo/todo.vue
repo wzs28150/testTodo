@@ -1,14 +1,21 @@
 <template>
-  <div id="">
-
-  </div>
+  <section class="real-app">
+    <input
+    type="text"
+    class="add-input"
+    autofocus="autofocus"
+    placeholder="接下来做什么"
+    @keyup.enter="addTodo"
+    >
+  </section>
 </template>
 <script>
 export default {
-  name: "",
-  data: () => ({
+  methods: {
+    addTodo() {
 
-  })
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>
